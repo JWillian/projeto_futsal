@@ -19,11 +19,12 @@ O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar j
 
 ## Rotas das Requisições das Tabelas
 
-![image](https://github.com/JWillian/projeto_futsal/assets/19697488/91fe9173-0a18-41df-894d-723bd257f7b7)
+![image](https://github.com/JWillian/projeto_futsal/assets/19697488/cc024952-748f-4b1f-a4ea-2db1fd424f8e)
 
 ## Rotas do Login do user para acessar o Token da autenticação JWT
 
-![image](https://github.com/JWillian/projeto_futsal/assets/19697488/fb0e6296-d603-414e-808b-79a114031376)
+![image](https://github.com/JWillian/projeto_futsal/assets/19697488/6b8d25e9-794a-4491-ac0d-188ea1ecacc1)
+
 
 ## Instruções para acesso das rotas 
 
