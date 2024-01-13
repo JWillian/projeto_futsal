@@ -11,6 +11,9 @@ O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar j
 - Composer
 - NPM
 
+  #Host
+  - Aplicação local via Xampp
+
 ## Funcionalidades Principais
 
 - Cadastro de times, jogadores, partidas e Campeonatos.
@@ -88,6 +91,7 @@ O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar j
 - Banco de dados MySQL
 - Node.js e NPM (para compilar os assets)
 - Postman para testar as requisições (end-point)
+- Xampp ou Wamp
 
 # clonar repositório
 Chave SSH - git@github.com:JWillian/projeto_futsal.git
