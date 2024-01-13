@@ -29,7 +29,7 @@ O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar j
 ![image](https://github.com/JWillian/projeto_futsal/assets/19697488/6b8d25e9-794a-4491-ac0d-188ea1ecacc1)
 
 
-## Instruções para acesso das rotas 
+## Instruções para o acesso das rotas 
 
 - Rodar comando php artisan tinker
 - Rodar comando User::factory()->create() para criar usuario com senha.
