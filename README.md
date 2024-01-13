@@ -1,5 +1,3 @@
-![image](https://github.com/JWillian/projeto_futsal/assets/19697488/3afdd093-d157-4b73-a43f-85807e573a1b)# Gestão de Campeonato De Futsal
-
 # Sobre o projeto
 
 O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar jogadores, times, partidas e campeonatos de fotebol. 
@@ -21,7 +19,7 @@ O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar j
 
 ## Rotas das Requisições das Tabelas
 
-![image](https://github.com/JWillian/projeto_futsal/assets/19697488/e4a3442a-a77e-4e1d-81de-8dbe37e03bb5)
+![image](https://github.com/JWillian/projeto_futsal/assets/19697488/91fe9173-0a18-41df-894d-723bd257f7b7)
 
 ## Rotas do Login do user para acessar o Token da autenticação JWT
 
@@ -96,6 +94,7 @@ Chave SSH - git@github.com:JWillian/projeto_futsal.git
 # Autor
 
 Jonatas Willian Rodrigues Leite Isaac
+(Isaac)
 
 https://www.linkedin.com/in/jonatas-willian-059923b7/
 
