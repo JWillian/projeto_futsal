@@ -1,6 +1,6 @@
 # Sobre o projeto
 
-O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar jogadores, times, partidas e campeonatos de fotebol. 
+O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar jogadores, times, partidas e campeonatos de futebol. 
 
 # Tecnologias utilizadas
 ## Back end
