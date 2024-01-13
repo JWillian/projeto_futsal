@@ -47,10 +47,10 @@ O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar j
 
   ## Rotas
 
-  Login
+ Login
 
- Route::post('register', [AuthController::class, 'register']); // Registro 
- Route::post('login', [AuthController::class, 'login']); // Faz login e Gera o Token.
+     Route::post('register', [AuthController::class, 'register']); // Registro 
+     Route::post('login', [AuthController::class, 'login']); // Faz login e Gera o Token.
 
  Tabelas Crud
  
