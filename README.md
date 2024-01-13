@@ -44,7 +44,7 @@ O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar j
 -Ir em em autorizathion e selecionar inherit auth from parent.
 - Fazer a requisição clicando em send e copiar o TOKEN gerado no retorno da requisição.
 - colocar a rota desejada (end-point)  e colocar em HEADERS as opções:
-  Cammpo key: Authorization     /
+  Campo key: Authorization     /
   Campo value: bearer + o token copiado [Token]
   
   [ OBS: os tokens tem limite de tempo. é preciso sempre gerar um token para obter os dados da requisição desejada. ]
