@@ -1,66 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+![image](https://github.com/JWillian/projeto_futsal/assets/19697488/3afdd093-d157-4b73-a43f-85807e573a1b)# Gestão de Campeonato De Futsal
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Sobre o projeto
 
-## About Laravel
+O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar jogadores, times, partidas e campeonatos de fotebol. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Tecnologias utilizadas
+## Back end
+- PHP
+- Laravel
+- Postman
+- Mysql
+- Composer
+- NPM
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funcionalidades Principais
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Cadastro de times, jogadores, partidas e Campeonatos.
+- Autenticação de usuários para garantir segurança e controle de acesso dos dados enviados nas requisições. 
+- Autenticação de todas as rotas atraves do autenticador de api JWT.
 
-## Learning Laravel
+## Rotas das Requisições das Tabelas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![image](https://github.com/JWillian/projeto_futsal/assets/19697488/e4a3442a-a77e-4e1d-81de-8dbe37e03bb5)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Rotas do Login do user para acessar o Token da autenticação JWT
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![image](https://github.com/JWillian/projeto_futsal/assets/19697488/fb0e6296-d603-414e-808b-79a114031376)
 
-## Laravel Sponsors
+## Instruções para acesso das rotas 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Rodar comando php artisan tinker
+- Rodar comando User::factory()->create() para criar usuario com senha.
+- Pegar o Email do Usuario / exemplo  ( email: "lbrakus@example.org")
+- Ir no postman e colocar o metodo Post
+- Colocar Rota -> http://127.0.0.1:8000/api/login
+- Inserir no Body os campos:
+   {
+   "email": "email copiado",
+   "password": "password"
+    }
+-Ir em em autorizathion e selecionar inherit auth from parent.
+- Fazer a requisição clicando em send e copiar o TOKEN gerado no retorno da requisição.
+- colocar a rota desejada (end-point)  e colocar em HEADERS as opções:
+  key: Authorization
+  value: bearer + o token copiado [Token]
+  
+  [ OBS: os tokens tem limite de tempo. é preciso sempre gerar um token para obter os dados da requisição desejada. ]
 
-### Premium Partners
+  ## Rotas
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+  Login
 
-## Contributing
+ Route::post('register', [AuthController::class, 'register']); // Registro 
+ Route::post('login', [AuthController::class, 'login']); // Faz login e Gera o Token.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ Tabelas Crud
+ 
+    Route::get('/jogadores', [JogadoresController::class, 'index']);   // Home jogadores.
+    Route::post('/jogadores',[JogadoresController::class, 'store']);  // Insere o Jogador.
+    Route::get('/jogadores/{id}',[JogadoresController::class, 'show']);  // Exibe o jogador.
+    Route::put('/jogadores/update/{id}', [JogadoresController::class, 'update']); // Atualiza os dados do Jogador.
+    Route::delete('/jogadores/delete/{id}', [JogadoresController::class, 'destroy']); // exclui o jogador.  
 
-## Code of Conduct
+    Route::get('/times',[TimeController::class, 'index']);   // Home times.
+    Route::post('/times',[TimeController::class, 'store']);  // Insere o time.
+    Route::get('/times/{id}',[TimeController::class, 'show']);  // Exibe o time.
+    Route::put('/times/update/{id}', [TimeController::class, 'update']); // Atualiza os dados do time.
+    Route::delete('/times/delete/{id}', [JogadoresController::class, 'destroy']); // exclui o time.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    Route::get('/partidas',[PartidaController::class, 'index']);   // Home partidas.
+    Route::post('/partidas',[PartidaController::class, 'store']);  // Insere a partida.
+    Route::get('/partidas/{id}',[PartidaController::class, 'show']);  // Exibe a partida.
+    Route::put('/partidas/update/{id}', [PartidaController::class, 'update']); // Atualiza a partida.
+    Route::delete('/partidas/delete/{id}', [PartidaController::class, 'destroy']); // exclui a partida.
 
-## Security Vulnerabilities
+    Route::get('/classificacao',[ClassificacaoController::class, 'index']);   // Home classificação.
+    Route::post('/classificacao',[ClassificacaoController::class, 'store']);  // Insere a classificação.
+    Route::get('/classificacao/{id}',[ClassificacaoController::class, 'show']);  // Exibe a classificação.
+    Route::put('/classificacao/update/{id}', [ClassificacaoController::class, 'update']); // Atualiza a classificação.
+    Route::delete('/classificacao/delete/{id}', [ClassificacaoController::class, 'destroy']); // exclui a classificação.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+## Pré-requisitos
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- PHP (versão 8 ou superior)
+- Laravel (versão 9 ou superior)
+- Composer
+- Banco de dados MySQL
+- Node.js e NPM (para compilar os assets)
+- Postman para testar as requisições (end-point)
+
+# clonar repositório
+Chave SSH - git@github.com:JWillian/projeto_futsal.git
+
+# Autor
+
+Jonatas Willian Rodrigues Leite Isaac
+
+https://www.linkedin.com/in/jonatas-willian-059923b7/
+
