@@ -11,7 +11,7 @@ O projeto de Gestão de Campeonato de Futsal é uma aplicação para gerenciar j
 - Composer
 - NPM
 
-  #Host
+ # Host
   - Aplicação local via Xampp
 
 ## Funcionalidades Principais
